@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/tubeify.js"></script>
+        <script type="text/javascript" id="data"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Tubeify</h1>
+            <div id="controls">
+                <a href="#" class="play">play</a>
+                <a href="#" class="pause">pause</a>
+                <a href="#" class="stop">stop</a>
+            </div>
+            <div id="player">
+                <!--
+                <object width="600" height="400">
+                    <param name="movie" value="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"></param>
+                    <param name="allowScriptAccess" value="always"></param>
+                    -->
+                    <embed id="tubeify-player"
+                           type="application/x-shockwave-flash"
+                           src="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"
+                           allowscriptaccess="always"
+                           width="1" height="1"></embed>
+                <!--
+                </object>
+                -->
+            </div>
+            <div id="search-panel">
+                <input id="q" name="q" type="text"/>
+                <input id="go" type="button" value="GO"/>
+            </div>
+            <div id="search-results">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
