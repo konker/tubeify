@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="js/zepto.js"></script>
-        <script type="text/javascript" src="js/tubeify.js"></script>
-        <script type="text/javascript" id="data"></script>
+        <link rel="stylesheet" type="text/css" href="css/tubeify.css">
     </head>
     <body>
         <div id="container">
             <h1>Tubeify</h1>
-            <div id="controls">
-                <a href="#" class="play">play</a>
-                <a href="#" class="pause">pause</a>
-                <a href="#" class="stop">stop</a>
+            <div id="controls" class="cf">
+                <div class="player">
+                    <a href="#" class="prev button">prev</a>
+                    <a href="#" class="play button">play</a>
+                    <a href="#" class="next button">next</a>
+                </div>
+                <div class="volume">
+                    <a href="#" class="vol-down small-button">vol -</a>
+                    <a href="#" class="vol-up small-button">vol +</a>
+                </div>
+                <div class="seek">
+                </div>
             </div>
-            <div id="player">
+            <div id="player" class="cf">
                 <!--
                 <object width="600" height="400">
                     <param name="movie" value="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"></param>
@@ -23,12 +29,12 @@
                            type="application/x-shockwave-flash"
                            src="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"
                            allowscriptaccess="always"
-                           width="1" height="1"></embed>
+                           width="100" height="100"></embed>
                 <!--
                 </object>
                 -->
             </div>
-            <div id="search-panel">
+            <div id="search-panel" class="cf">
                 <input id="q" name="q" type="text"/>
                 <input id="go" type="button" value="GO"/>
             </div>
@@ -37,5 +43,8 @@
                 </ul>
             </div>
         </div>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/tubeify.js"></script>
+        <script type="text/javascript" id="data"></script>
     </body>
 </html>

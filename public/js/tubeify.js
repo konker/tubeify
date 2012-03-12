@@ -47,6 +47,8 @@ var tubeify = (function() {
             $('#controls .play').bind('click', tubeify.controls.play);
             $('#controls .pause').bind('click', tubeify.controls.pause);
             $('#controls .stop').bind('click', tubeify.controls.stop);
+            $('#controls .vol-down').bind('click', tubeify.controls.volDown);
+            $('#controls .vol-up').bind('click', tubeify.controls.volUp);
             tubeify.player.init();
         },
         player: {
@@ -80,14 +82,31 @@ var tubeify = (function() {
             }
         },
         controls: {
+            isPlaying: false,
+
             play: function() {
-                tubeify.player.player.playVideo();
+                if (tubeify.controls.isPlaying) {
+                    tubeify.player.player.pauseVideo();
+                    tubeify.controls.isPlaying = false;
+                    $('#controls .pause').removeClass('pause').addClass('play');
+                }
+                else {
+                    tubeify.player.player.playVideo();
+                    tubeify.controls.isPlaying = true;
+                    $('#controls .play').removeClass('play').addClass('pause');
+                }
             },
             pause: function() {
                 tubeify.player.player.pauseVideo();
             },
             stop: function() {
                 tubeify.player.player.stopVideo();
+            },
+            volDown: function() {
+                tubeify.player.player.setVolume(tubeify.player.player.getVolume() - 10);
+            },
+            volUp: function() {
+                tubeify.player.player.setVolume(tubeify.player.player.getVolume() + 10);
             }
         },
         search: {
