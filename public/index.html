@@ -19,32 +19,44 @@
                 <div class="seek">
                 </div>
             </div>
+            <div id="loading"><img src="img/loading.gif" alt="loading.."/></div>
             <div id="player" class="cf">
+                <div id="tubeify-player-container"></div>
                 <!--
                 <object width="600" height="400">
                     <param name="movie" value="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"></param>
                     <param name="allowScriptAccess" value="always"></param>
-                    -->
                     <embed id="tubeify-player"
                            type="application/x-shockwave-flash"
                            src="http://www.youtube.com/apiplayer?enablejsapi=1&version=3"
                            allowscriptaccess="always"
-                           width="100" height="100"></embed>
-                <!--
+                           width="10" height="10"></embed>
                 </object>
                 -->
             </div>
             <div id="search-panel" class="cf">
-                <input id="q" name="q" type="text"/>
+                <input id="q" name="q" type="text" value="adele"/>
                 <input id="go" type="button" value="GO"/>
+                <div class="search-type">
+                    <input type="radio" id="search-type-1" name="search-type" value="artist" checked="checked"/>
+                    <label for="search-type-1">Artist</label>
+                    <input type="radio" id="search-type-2" name="search-type" value="song"/>
+                    <label for="search-type-2">Song</label>
+                </div>
             </div>
             <div id="search-results">
                 <ul>
                 </ul>
             </div>
         </div>
+        <!--
         <script type="text/javascript" src="js/zepto.js"></script>
+        -->
+        <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js'></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/tubeify.js"></script>
-        <script type="text/javascript" id="data"></script>
+        <!--
+        <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+        -->
     </body>
 </html>

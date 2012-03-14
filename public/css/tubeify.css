@@ -3,6 +3,10 @@
     Authors: Konrad Markus <konker@gmail.com>
 */
 
+#loading img {
+    display: none;
+    }
+
 #controls {
     }
     #controls .button,
@@ -56,6 +60,9 @@
         background: url(../img/max-vol.png) 0 0 no-repeat;
         }
 
+        #player {
+            kvisibility: hidden;
+            }
 
 /* For modern browsers */
 .cf:before,
